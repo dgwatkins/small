@@ -1,0 +1,32 @@
+/*
+Theme Name: Small
+Description: Really really minimal theme, to ease debugging.
+Version: 0.1
+License: MIT
+Text Domain: small
+*/
+
+body,
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  #container {
+    flex-direction: row;
+    flex: 1;
+  }
+  main {
+    flex: 1;
+  }
+  nav,
+  aside {
+    flex: 0 0 12em;
+  }
+}
