@@ -1,5 +1,9 @@
 <?php
+
 function small_setup() {
+//	add_theme_support('woocommerce');
+
+	load_theme_textdomain( 'small', get_template_directory() . '/languages' );
 
 	register_nav_menus( array(
 		'menu'    => __( 'Menu', 'small' )
@@ -25,6 +29,7 @@ function small_register() {
 	$args = array(
 		'public' => true,
 		'has_archive' => true,
+		'rewrite' => array( 'slug' => __( 'book', 'small' ) ),
 		'label'  => __( 'Books', 'small' )
 	);
 	register_post_type( 'book', $args );
