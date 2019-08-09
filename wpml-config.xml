@@ -2,4 +2,7 @@
   <custom-types>
     <custom-type translate="1">book</custom-type>
   </custom-types>
+  <admin-texts>
+    <key name="my_field" />
+  </admin-texts>
 </wpml-config>
