@@ -13,6 +13,12 @@
 		</a>
 	</header>
 
+	<?php
+		if ( function_exists('yoast_breadcrumb') ) {
+			yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+		}
+	?>
+
 	<div id="container">
 		<?php wp_nav_menu( array(
 			'theme_location' => 'menu',

@@ -1,7 +1,10 @@
 <?php
-// Menus/Sidebars/etc
+/**
+ * Setup theme features.
+ */
 function small_setup() {
-//	add_theme_support('woocommerce');
+	add_theme_support( 'woocommerce' );
+	add_theme_support( 'title-tag' );
 
 	load_theme_textdomain( 'small', get_template_directory() . '/languages' );
 
@@ -19,36 +22,41 @@ function small_setup() {
 
 add_action( 'after_setup_theme', 'small_setup' );
 
-// Load assets
+/**
+ * Assets.
+ */
 function small_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 }
 
 add_action( 'wp_enqueue_scripts', 'small_scripts' );
 
-// Register CPT
+/**
+ * Custom post types.
+ */
 function small_register() {
-	$args = array(
+	$args = [
 		'public' => true,
 		'has_archive' => true,
-		'rewrite' => array( 'slug' => __( 'book', 'small' ) ),
+		'rewrite' => [ 'slug' => 'book' ],
 		'label'  => __( 'Books', 'small' )
-	);
+	];
 	register_post_type( 'book', $args );
 }
+
 add_action( 'init', 'small_register' );
 
-// Add custom setting
-add_filter('admin_init', 'my_general_settings_register_fields');
- 
-function my_general_settings_register_fields()
-{
+/**
+ * Add a custom setting.
+ */
+function my_general_settings_register_fields() {
     register_setting('general', 'my_field', 'esc_attr');
     add_settings_field('my_field', '<label for="my_field">'.__('My Field' , 'my_field' ).'</label>' , 'my_general_settings_fields_html', 'general');
 }
- 
-function my_general_settings_fields_html()
-{
+
+function my_general_settings_fields_html() {
     $value = get_option( 'my_field', '' );
     echo '<input type="text" id="my_field" name="my_field" value="' . $value . '" />';
 }
+
+add_filter('admin_init', 'my_general_settings_register_fields');
