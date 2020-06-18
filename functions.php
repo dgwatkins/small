@@ -42,6 +42,16 @@ function small_register() {
 		'label'  => __( 'Books', 'small' )
 	];
 	register_post_type( 'book', $args );
+
+	$args = [
+		'hierarchical'      => true,
+		'label'             => __( 'Genres', 'small' ),
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => [ 'slug' => 'genre' ],
+	];
+	register_taxonomy( 'genre', [ 'book' ], $args );
 }
 
 add_action( 'init', 'small_register' );

@@ -2,6 +2,9 @@
   <custom-types>
     <custom-type translate="1">book</custom-type>
   </custom-types>
+  <taxonomies>
+    <taxonomy translate="1">genre</taxonomy>
+  </taxonomies>
   <admin-texts>
     <key name="my_field" />
   </admin-texts>
