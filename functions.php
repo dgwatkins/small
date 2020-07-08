@@ -5,6 +5,7 @@
 function small_setup() {
 	add_theme_support( 'woocommerce' );
 	add_theme_support( 'title-tag' );
+	add_theme_support( 'custom-logo' );
 
 	load_theme_textdomain( 'small', get_template_directory() . '/languages' );
 

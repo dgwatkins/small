@@ -6,16 +6,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-
 	<header>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-			<h1><?php bloginfo( 'name' ); ?></h1>
-		</a>
+		<h1><?php the_custom_logo(); ?></h1>
 	</header>
 
 	<?php
 		if ( function_exists('yoast_breadcrumb') ) {
-			yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+			yoast_breadcrumb( '<div id="breadcrumbs">','</div>' );
 		}
 	?>
 

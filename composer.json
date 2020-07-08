@@ -1,0 +1,13 @@
+{
+    "name": "david/small",
+    "description": "Really small theme for debugging purpose.",
+    "type": "wordpress-theme",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "David Garcia Watkins",
+            "email": "david.gw@onthegosystems.com"
+        }
+    ],
+    "require": {}
+}
