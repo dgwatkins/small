@@ -28,6 +28,7 @@ add_action( 'after_setup_theme', 'small_setup' );
  */
 function small_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'normalize', get_stylesheet_directory_uri() . '/vendor/components/normalize.css/normalize.css' );
 }
 
 add_action( 'wp_enqueue_scripts', 'small_scripts' );

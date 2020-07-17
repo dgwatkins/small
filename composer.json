@@ -9,5 +9,7 @@
             "email": "david.gw@onthegosystems.com"
         }
     ],
-    "require": {}
+    "require": {
+        "components/normalize.css": "^3.0"
+    }
 }
