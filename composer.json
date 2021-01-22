@@ -2,7 +2,7 @@
     "name": "dgwatkins/small",
     "description": "Really small theme for debugging purpose.",
     "type": "wordpress-theme",
-    "license": "GPL",
+    "license": "GPL-2.0-only",
     "authors": [
         {
             "name": "David Garcia Watkins",
