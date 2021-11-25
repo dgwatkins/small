@@ -72,3 +72,10 @@ function my_general_settings_fields_html() {
 }
 
 add_filter('admin_init', 'my_general_settings_register_fields');
+
+/**
+ * BuddyPress: add custom profile field to members list.
+ */
+add_action( 'bp_directory_members_item', function() {
+	echo bp_get_member_profile_data( 'field=Developer' );
+} );
