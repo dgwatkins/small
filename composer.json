@@ -7,9 +7,27 @@
         {
             "name": "David Garcia Watkins",
             "email": "david.gw@onthegosystems.com"
+        },
+        {
+            "name": "Jamal Boulhous",
+            "email": "jamal.b@onthegosystems.com"
         }
     ],
+    "repositories":[
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "vendor/{$name}/": [
+                "type:wordpress-plugin"
+            ]
+        }
+    },
     "require": {
+        "wpackagist-plugin/advanced-custom-fields": "^5.11",
         "components/normalize.css": "^3.0"
     }
 }
