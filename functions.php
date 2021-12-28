@@ -79,3 +79,20 @@ add_filter('admin_init', 'my_general_settings_register_fields');
 add_action( 'bp_directory_members_item', function() {
 	echo bp_get_member_profile_data( 'field=Developer' );
 } );
+
+/**
+ * Advanced Custom Fields: Include ACF in the theme.
+ */
+// Define path and URL to the ACF plugin.
+define( 'MY_ACF_PATH', get_stylesheet_directory() . '/vendor/advanced-custom-fields/' );
+define( 'MY_ACF_URL', get_stylesheet_directory_uri() . '/vendor/advanced-custom-fields/' );
+
+// Include the ACF plugin.
+include_once( MY_ACF_PATH . 'acf.php' );
+
+// Customize the url setting to fix incorrect asset URLs.
+add_filter( 'acf/settings/url', 'my_acf_settings_url' );
+function my_acf_settings_url( $url ) {
+	return MY_ACF_URL;
+}
+
