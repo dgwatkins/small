@@ -29,5 +29,10 @@
     "require": {
         "wpackagist-plugin/advanced-custom-fields": "^5.11",
         "components/normalize.css": "^3.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
     }
 }
