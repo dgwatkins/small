@@ -6,10 +6,17 @@ License: MIT
 Text Domain: small
 */
 
-body,
+body {
+  padding: 1em;
+}
+
 #container {
   display: flex;
   flex-direction: column;
+}
+
+main {
+  margin: 0 1em;
 }
 
 ul, li {
